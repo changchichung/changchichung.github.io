@@ -1,165 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-    <channel>
-        <title></title>
-        <link>undefined</link>
-        <description>undefined</description>
-        <lastBuildDate>Thu, 02 Mar 2023 01:55:24 GMT</lastBuildDate>
-        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-        <generator>Joplin Pages Publisher</generator>
-        <item>
-            <title><![CDATA[tepe - send messages to telegram bot - for publish]]></title>
-            <guid>67f2076b8cac40e881fe825078a10143</guid>
-            <pubDate>Thu, 02 Mar 2023 01:50:02 GMT</pubDate>
-            <content:encoded><![CDATA[<p>repo: <a title="https://github.com/Hermitter/tepe" href="https://github.com/Hermitter/tepe">https://github.com/Hermitter/tepe</a></p>
-<h5 id="run">run</h5>
-<div><pre class="hljs"><code><span class="hljs-attribute">TEPE_TELEGRAM_BOT_TOKEN</span>=<span class="hljs-number">600000045</span>:AA0000008-<span class="hljs-number">4</span>z00006-B5Fg_HMjbsJWTR0000Uo tepe send -c <span class="hljs-number">80000009</span> -m <span class="hljs-string">"🙃💣🤡"</span> &gt; /dev/null <span class="hljs-number">2</span>&gt;&amp;<span class="hljs-number">1</span></code></pre></div>
-<h5 id="result">result</h5>
-<p><img src="https://i.imgur.com/w9apmme.png" /></p>
-<h5 id="send-files">send files</h5>
-<div><pre class="hljs"><code>TEPE_TELEGRAM_BOT_TOKEN=<span class="hljs-number">600000045</span>:AA0000008-<span class="hljs-number">4</span>z00006-B5Fg_HMjbsJWTR0000Uo
-tepe send -c <span class="hljs-number">80000009</span> -m <span class="hljs-string">"burning time"</span> <span class="hljs-regexp">/home/</span>chchang<span class="hljs-regexp">/Downloads/</span>E.jpg &gt; <span class="hljs-regexp">/dev/</span><span class="hljs-keyword">null</span> <span class="hljs-number">2</span>&gt;&amp;<span class="hljs-number">1</span></code></pre></div>
-<h5 id="result-2">result</h5>
-<p><img src="https://i.imgur.com/q8t1GpN.png" /></p>
-<h5 id="send-file-content">send file content</h5>
-<div><pre class="hljs"><code><span class="hljs-attribute">TEPE_TELEGRAM_BOT_TOKEN</span>=<span class="hljs-number">600000045</span>:AA0000008-<span class="hljs-number">4</span>z00006-B5Fg_HMjbsJWTR0000Uo tepe send -c <span class="hljs-number">80000009</span> -m <span class="hljs-string">"`cat vimrc`"</span></code></pre></div>
-<h5 id="result-3">result</h5>
-<p><img src="https://i.imgur.com/Q3po7rr.png" /></p>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[install_brew.sh - for publish]]></title>
-            <guid>51a65abbb80b43498652ca9045cee475</guid>
-            <pubDate>Thu, 02 Mar 2023 01:50:02 GMT</pubDate>
-            <content:encoded><![CDATA[<p><strong>install brew for linux</strong></p>
-<div><pre class="hljs"><code><span class="hljs-meta">#!/bin/bash</span>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
 
-sudo apt-get install build-essential procps curl file git
-/bin/bash -c <span class="hljs-string">"<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</span>"</span>
-<span class="hljs-keyword">if</span> [ ! -f <span class="hljs-string">"/home/linuxbrew/.linuxbrew/bin/brew"</span> ] ; <span class="hljs-keyword">then</span>
-  <span class="hljs-built_in">test</span> -d ~/.linuxbrew &amp;&amp; <span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-subst">$(~/.linuxbrew/bin/brew shellenv)</span>"</span>
-  <span class="hljs-built_in">test</span> -d /home/linuxbrew/.linuxbrew &amp;&amp; <span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-subst">$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)</span>"</span>
-  <span class="hljs-built_in">test</span> -r ~/.bash_profile &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">"eval \"\$(<span class="hljs-subst">$(brew --prefix)</span>/bin/brew shellenv)\""</span> &gt;&gt; ~/.bash_profile
-  <span class="hljs-built_in">echo</span> <span class="hljs-string">"eval \"\$(<span class="hljs-subst">$(brew --prefix)</span>/bin/brew shellenv)\""</span> &gt;&gt; ~/.profile
-<span class="hljs-keyword">else</span>
-  <span class="hljs-built_in">echo</span> <span class="hljs-string">"brew already installed , skip it !"</span>
-<span class="hljs-keyword">fi</span></code></pre></div>
-<p>!!! info<br />
-after installation , run these two commands<br />
-!!!</p>
-<div><pre class="hljs"><code>- <span class="hljs-built_in">Run</span> these two commands <span class="hljs-keyword">in</span> your terminal <span class="hljs-keyword">to</span> <span class="hljs-built_in">add</span> Homebrew <span class="hljs-keyword">to</span> your PATH:
-    (echo; echo <span class="hljs-string">'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'</span>) &gt;&gt; /home/chchang/.profile
-    eval <span class="hljs-string">"<span class="hljs-variable">$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)</span>"</span>
-- Install Homebrew<span class="hljs-string">'s dependencies if you have sudo access:
-    sudo apt-get install build-essential
-  For more information, see:
-    https://docs.brew.sh/Homebrew-on-Linux
-- We recommend that you install GCC:
-    brew install gcc
-- Run brew help to get started
-- Further documentation:
-    https://docs.brew.sh</span></code></pre></div>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[linux system tools - for publish]]></title>
-            <guid>6796b65b0e674de09782eba70af6d5c7</guid>
-            <pubDate>Thu, 02 Mar 2023 01:50:02 GMT</pubDate>
-            <content:encoded><![CDATA[<h3 id="fd">fd</h3>
-<p>A simple, fast and user-friendly alternative to 'find'<br />
-<a title="https://github.com/sharkdp/fd" href="https://github.com/sharkdp/fd">https://github.com/sharkdp/fd</a></p>
-<h3 id="bat">bat</h3>
-<p>A cat(1) clone with wings.<br />
-<img src="https://tinyimg.io/i/LVE93hz.jpg" /><br />
-<a title="https://github.com/sharkdp/bat" href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a></p>
-<h3 id="dust">dust</h3>
-<p>A more intuitive version of du in rust<br />
-<img src="https://github.com/bootandy/dust/blob/master/media/snap.png" /><br />
-<a title="https://github.com/bootandy/dust" href="https://github.com/bootandy/dust">https://github.com/bootandy/dust</a></p>
-<h3 id="duf">duf</h3>
-<p>Disk Usage/Free Utility - a better 'df' alternative<br />
-<img src="https://github.com/muesli/duf/blob/master/duf.png" /><br />
-<a title="https://github.com/muesli/duf" href="https://github.com/muesli/duf">https://github.com/muesli/duf</a></p>
-<h3 id="pgcli">pgcli</h3>
-<p>Postgres CLI with autocompletion and syntax highlighting<br />
-<img src="https://github.com/dbcli/pgcli/raw/main/screenshots/pgcli.gif" /></p>
-<h3 id="lazydocker">lazydocker</h3>
-<p>The lazier way to manage everything docker<br />
-<img src="https://github.com/jesseduffield/lazydocker/raw/master/docs/resources/demo3.gif" /><br />
-<a title="https://github.com/jesseduffield/lazydocker#installation" href="https://github.com/jesseduffield/lazydocker#installation">https://github.com/jesseduffield/lazydocker#installation</a></p>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[用户目录不使用中文]]></title>
-            <guid>2b1c17f6630143ba8caab8a03dbcfc18</guid>
-            <pubDate>Sat, 18 Feb 2023 02:15:05 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="用户目录不使用中文">用户目录不使用中文</h1>
-<p>RUN LANG=C xdg-user-dirs-update --force</p>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[ANSI Color code in bash script]]></title>
-            <guid>236db21ce26f468cb82efe7c7ec63994</guid>
-            <pubDate>Wed, 18 Jan 2023 06:40:45 GMT</pubDate>
-            <content:encoded><![CDATA[<p>some variables that you can use:</p>
-<div><pre class="hljs"><code><span class="hljs-comment"># Reset</span>
-<span class="hljs-attr">NC</span>=<span class="hljs-string">'\033[0m'</span>       <span class="hljs-comment"># Text Reset</span>
-
-<span class="hljs-comment"># Regular Colors</span>
-<span class="hljs-attr">Black</span>=<span class="hljs-string">'\033[0;30m'</span>        <span class="hljs-comment"># Black</span>
-<span class="hljs-attr">Red</span>=<span class="hljs-string">'\033[0;31m'</span>          <span class="hljs-comment"># Red</span>
-<span class="hljs-attr">Green</span>=<span class="hljs-string">'\033[0;32m'</span>        <span class="hljs-comment"># Green</span>
-<span class="hljs-attr">Yellow</span>=<span class="hljs-string">'\033[0;33m'</span>       <span class="hljs-comment"># Yellow</span>
-<span class="hljs-attr">Blue</span>=<span class="hljs-string">'\033[0;34m'</span>         <span class="hljs-comment"># Blue</span>
-<span class="hljs-attr">Purple</span>=<span class="hljs-string">'\033[0;35m'</span>       <span class="hljs-comment"># Purple</span>
-<span class="hljs-attr">Cyan</span>=<span class="hljs-string">'\033[0;36m'</span>         <span class="hljs-comment"># Cyan</span>
-<span class="hljs-attr">White</span>=<span class="hljs-string">'\033[0;37m'</span>        <span class="hljs-comment"># White</span>
-
-<span class="hljs-comment"># Bold</span>
-<span class="hljs-attr">BBlack</span>=<span class="hljs-string">'\033[1;30m'</span>       <span class="hljs-comment"># Black</span>
-<span class="hljs-attr">BRed</span>=<span class="hljs-string">'\033[1;31m'</span>         <span class="hljs-comment"># Red</span>
-<span class="hljs-attr">BGreen</span>=<span class="hljs-string">'\033[1;32m'</span>       <span class="hljs-comment"># Green</span>
-<span class="hljs-attr">BYellow</span>=<span class="hljs-string">'\033[1;33m'</span>      <span class="hljs-comment"># Yellow</span>
-<span class="hljs-attr">BBlue</span>=<span class="hljs-string">'\033[1;34m'</span>        <span class="hljs-comment"># Blue</span>
-<span class="hljs-attr">BPurple</span>=<span class="hljs-string">'\033[1;35m'</span>      <span class="hljs-comment"># Purple</span>
-<span class="hljs-attr">BCyan</span>=<span class="hljs-string">'\033[1;36m'</span>        <span class="hljs-comment"># Cyan</span>
-<span class="hljs-attr">BWhite</span>=<span class="hljs-string">'\033[1;37m'</span>       <span class="hljs-comment"># White</span></code></pre></div>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Ubuntu 22.04 LTS 不用再自己写rc-local.service了]]></title>
-            <guid>0c35125933ac4d49886a66673e55e1e8</guid>
-            <pubDate>Wed, 28 Dec 2022 09:32:07 GMT</pubDate>
-            <content:encoded><![CDATA[<a title="https://m.isolves.com/it/rj/czxt/linux/2022-06-17/55976.html" href="https://m.isolves.com/it/rj/czxt/linux/2022-06-17/55976.html">https://m.isolves.com/it/rj/czxt/linux/2022-06-17/55976.html</a>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[建立一個 user:passwd 格式的檔案]]></title>
-            <guid>6df249348cb245959ce15a273d28b4f2</guid>
-            <pubDate>Thu, 27 Oct 2022 06:12:39 GMT</pubDate>
-            <content:encoded><![CDATA[<p>htpasswd 要的帳號密碼對應<br />
-也可以拿來做其他用途</p>
-<div><pre class="hljs"><code><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">make</span> <span class="hljs-string">sure</span> <span class="hljs-string">/tmp/user_pass</span> <span class="hljs-string">exists</span>
-  <span class="hljs-attr">file:</span>
-    <span class="hljs-attr">path:</span> <span class="hljs-string">/tmp/user_pass</span>
-    <span class="hljs-attr">state:</span> <span class="hljs-string">touch</span>
-  
-<span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">register</span> <span class="hljs-string">previous</span> <span class="hljs-string">mapping</span>
-  <span class="hljs-attr">shell:</span> <span class="hljs-string">"cat /tmp/user_pass"</span>
-  <span class="hljs-attr">register:</span> <span class="hljs-string">"user_pass_reg"</span>
-  
-<span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">create</span> <span class="hljs-string">user/password</span> <span class="hljs-string">mapping</span> <span class="hljs-string">yml</span>
-  <span class="hljs-attr">lineinfile:</span> 
-    <span class="hljs-attr">line:</span> <span class="hljs-string">"<span class="hljs-template-variable">{{ item.name }}</span>:<span class="hljs-template-variable">{{ lookup('ansible.builtin.password', '/dev/null length=8 chars=ascii_letters,digits') }}</span>"</span>
-    <span class="hljs-attr">path:</span> <span class="hljs-string">/tmp/user_pass</span>
-  <span class="hljs-attr">with_items:</span> <span class="hljs-string">"<span class="hljs-template-variable">{{ users_nopassword }}</span>"</span>
-  <span class="hljs-attr">when:</span> <span class="hljs-string">not</span> <span class="hljs-string">user_pass_reg.stdout.find(item.name)</span> <span class="hljs-type">!=</span> <span class="hljs-number">-1</span></code></pre></div>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[plugins/README.md at master · joplin/plugins · GitHub]]></title>
-            <guid>57a0e3091d2d44d1a86e3d9b15c4cf11</guid>
-            <pubDate>Sun, 23 Jan 2022 23:25:53 GMT</pubDate>
-            <content:encoded><![CDATA[<p><a title="#start-of-content" href="#start-of-content">Skip to content</a></p>
+    <title>plugins/README.md at master · joplin/plugins · GitHub - Jop</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">Jop</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">plugins/README.md at master · joplin/plugins · GitHub</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1642980353662"
+                  >2022-01-24 07:25</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1642980353662"
+                  >2022-01-24 07:25</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><p><a title="#start-of-content" href="#start-of-content">Skip to content</a></p>
 <ul>
 <li>Why GitHub?</li>
 <li><a title="https://github.com/team" href="https://github.com/team">Team</a></li>
@@ -1011,7 +884,8 @@ after installation , run these two commands<br />
 <p>iTunes64Setup.exe</p>
 <p><img /></p>
 <p>iTunes64Setup.exe</p>
-]]></content:encoded>
-        </item>
-    </channel>
-</rss>
+</div>
+      </article>
+    </div>
+  </body>
+</html>

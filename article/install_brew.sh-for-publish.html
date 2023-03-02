@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>install_brew.sh - for publish - Jop</title>
+  <link rel="stylesheet" href="/_markdown_plugin_assets/highlight.js/atom-one-light.css" /></head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">Jop</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">install_brew.sh - for publish</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1677721802449"
+                  >2023-03-02 09:50</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1677722094386"
+                  >2023-03-02 09:54</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><p><strong>install brew for linux</strong></p>
+<div><pre class="hljs"><code><span class="hljs-meta">#!/bin/bash</span>
+
+sudo apt-get install build-essential procps curl file git
+/bin/bash -c <span class="hljs-string">"<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</span>"</span>
+<span class="hljs-keyword">if</span> [ ! -f <span class="hljs-string">"/home/linuxbrew/.linuxbrew/bin/brew"</span> ] ; <span class="hljs-keyword">then</span>
+  <span class="hljs-built_in">test</span> -d ~/.linuxbrew &amp;&amp; <span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-subst">$(~/.linuxbrew/bin/brew shellenv)</span>"</span>
+  <span class="hljs-built_in">test</span> -d /home/linuxbrew/.linuxbrew &amp;&amp; <span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-subst">$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)</span>"</span>
+  <span class="hljs-built_in">test</span> -r ~/.bash_profile &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">"eval \"\$(<span class="hljs-subst">$(brew --prefix)</span>/bin/brew shellenv)\""</span> &gt;&gt; ~/.bash_profile
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">"eval \"\$(<span class="hljs-subst">$(brew --prefix)</span>/bin/brew shellenv)\""</span> &gt;&gt; ~/.profile
+<span class="hljs-keyword">else</span>
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">"brew already installed , skip it !"</span>
+<span class="hljs-keyword">fi</span></code></pre></div>
+<p>!!! info<br />
+after installation , run these two commands<br />
+!!!</p>
+<div><pre class="hljs"><code>- <span class="hljs-built_in">Run</span> these two commands <span class="hljs-keyword">in</span> your terminal <span class="hljs-keyword">to</span> <span class="hljs-built_in">add</span> Homebrew <span class="hljs-keyword">to</span> your PATH:
+    (echo; echo <span class="hljs-string">'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'</span>) &gt;&gt; /home/chchang/.profile
+    eval <span class="hljs-string">"<span class="hljs-variable">$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)</span>"</span>
+- Install Homebrew<span class="hljs-string">'s dependencies if you have sudo access:
+    sudo apt-get install build-essential
+  For more information, see:
+    https://docs.brew.sh/Homebrew-on-Linux
+- We recommend that you install GCC:
+    brew install gcc
+- Run brew help to get started
+- Further documentation:
+    https://docs.brew.sh</span></code></pre></div>
+</div>
+      </article>
+    </div>
+  </body>
+</html>
