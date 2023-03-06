@@ -4,9 +4,26 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Thu, 02 Mar 2023 01:55:24 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 06 Mar 2023 01:54:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Joplin Pages Publisher</generator>
+        <item>
+            <title><![CDATA[micrsoft edge + odt file m auto preview !]]></title>
+            <guid>9ee430227eb045109905a3b3d658a858</guid>
+            <pubDate>Mon, 06 Mar 2023 01:44:26 GMT</pubDate>
+            <content:encoded><![CDATA[<p>剛剛意外的在用 microsoft edge 瀏覽器開啟了一個odt 的URL</p>
+<p><a title="https://ncc.cow.com/index.php/apps/sharingpath/chchang/Public/1.odt" href="https://ncc.cow.com/index.php/apps/sharingpath/chchang/Public/1.odt">https://ncc.cow.com/index.php/apps/sharingpath/chchang/Public/1.odt</a></p>
+<p>沒想到 edge 居然很自動的自動開啟預覽畫面<br />
+!!!warning<br />
+不知道跟我有登入office 365帳號有沒有關係，我想應該是要登入才可以吧？ )<br />
+!!!</p>
+<p>意外的效果還不錯，如下圖<br />
+<img src="https://i.imgur.com/0agmpY7.png" alt="microsoft edge auto preview odt file" /></p>
+<p>或許是少數幾個微軟產品的亮點？？？</p>
+<hr />
+<p>HackMD Note URL: <a title="https://hackmd.io/AZ8sfEACTSu4luhjjJ0v1Q" href="https://hackmd.io/AZ8sfEACTSu4luhjjJ0v1Q">https://hackmd.io/AZ8sfEACTSu4luhjjJ0v1Q</a></p>
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[tepe - send messages to telegram bot - for publish]]></title>
             <guid>67f2076b8cac40e881fe825078a10143</guid>
