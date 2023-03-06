@@ -4,11 +4,11 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Mon, 06 Mar 2023 01:54:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 06 Mar 2023 01:56:04 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Joplin Pages Publisher</generator>
         <item>
-            <title><![CDATA[micrsoft edge + odt file m auto preview !]]></title>
+            <title><![CDATA[micrsoft edge + odt file auto preview !]]></title>
             <guid>9ee430227eb045109905a3b3d658a858</guid>
             <pubDate>Mon, 06 Mar 2023 01:44:26 GMT</pubDate>
             <content:encoded><![CDATA[<p>剛剛意外的在用 microsoft edge 瀏覽器開啟了一個odt 的URL</p>
@@ -170,6 +170,22 @@ after installation , run these two commands<br />
     <span class="hljs-attr">path:</span> <span class="hljs-string">/tmp/user_pass</span>
   <span class="hljs-attr">with_items:</span> <span class="hljs-string">"<span class="hljs-template-variable">{{ users_nopassword }}</span>"</span>
   <span class="hljs-attr">when:</span> <span class="hljs-string">not</span> <span class="hljs-string">user_pass_reg.stdout.find(item.name)</span> <span class="hljs-type">!=</span> <span class="hljs-number">-1</span></code></pre></div>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[MrDoc]]></title>
+            <guid>751025e5e9ca4db1805140a7a23d742e</guid>
+            <pubDate>Wed, 18 May 2022 03:15:19 GMT</pubDate>
+            <content:encoded><![CDATA[<h3 id="郵箱設置">郵箱設置</h3>
+<p><img src="https://i.imgur.com/T7lo0wX.png" /></p>
+<h3 id="文檔設置">文檔設置</h3>
+<p>開放多種副檔名上傳 &amp; 調整單一檔案大小<br />
+<img src="https://i.imgur.com/0tH9zYL.png" /></p>
+<ul>
+<li>從iPhone 操作，確定可以選擇手機內的影片、圖片上傳。<br />
+但是影片只支援MP4 , MOV 檔案只能以附件形式上傳(無法預覽、播放<br />
+)</li>
+</ul>
 ]]></content:encoded>
         </item>
         <item>
