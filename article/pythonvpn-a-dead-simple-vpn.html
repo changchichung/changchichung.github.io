@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/_assets/main.css" />
+
+    <title>pythonvpn - a dead simple VPN - Jop</title>
+  <link rel="stylesheet" href="/_markdown_plugin_assets/highlight.js/atom-one-light.css" /></head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">Jop</a>
+      </nav>
+      <article>
+        <header>
+          <h1 class="article-title">pythonvpn - a dead simple VPN</h1>
+          <div class="article-info">
+            <div>
+              <span
+                >Created At：<time datetime="1678842519388"
+                  >2023-03-15 09:08</time
+                ></span
+              >
+              <span
+                >Updated At：<time datetime="1678844078171"
+                  >2023-03-15 09:34</time
+                ></span
+              >
+            </div>
+            
+          </div>
+        </header>
+        <div class="article-content markdown-body"><p><a title="https://github.com/qwj/python-vpn" href="https://github.com/qwj/python-vpn">https://github.com/qwj/python-vpn</a></p>
+<h3 id="quick-start">Quick Start</h3>
+<p><strong>install via pip</strong></p>
+<div><pre class="hljs"><code><span class="hljs-number">2023</span><span class="hljs-number">-03</span><span class="hljs-number">-15</span> <span class="hljs-number">09</span>:<span class="hljs-number">10</span>:<span class="hljs-number">40</span> [chchang@ny ~ ]$ sudo pip install pvpn
+Collecting pvpn
+  Using cached pvpn<span class="hljs-number">-0.2</span><span class="hljs-number">.5</span>-py3-<span class="hljs-literal">none</span>-<span class="hljs-keyword">any</span>.whl (<span class="hljs-number">70</span> kB)
+Requirement already satisfied: pycryptodome&gt;=<span class="hljs-number">3.7</span><span class="hljs-number">.2</span> <span class="hljs-keyword">in</span> /usr/<span class="hljs-built_in">local</span>/lib/python3<span class="hljs-number">.10</span>/dist-packages (<span class="hljs-built_in">from</span> pvpn) (<span class="hljs-number">3.17</span>)
+Requirement already satisfied: pproxy&gt;=<span class="hljs-number">2.0</span><span class="hljs-number">.0</span> <span class="hljs-keyword">in</span> /usr/<span class="hljs-built_in">local</span>/lib/python3<span class="hljs-number">.10</span>/dist-packages (<span class="hljs-built_in">from</span> pvpn) (<span class="hljs-number">2.7</span><span class="hljs-number">.8</span>)
+Installing collected packages: pvpn
+Successfully installed pvpn<span class="hljs-number">-0.2</span><span class="hljs-number">.5</span>
+WARNING: Running pip <span class="hljs-keyword">as</span> <span class="hljs-keyword">the</span> <span class="hljs-string">'root'</span> user can <span class="hljs-built_in">result</span> <span class="hljs-keyword">in</span> broken permissions <span class="hljs-keyword">and</span> conflicting behaviour <span class="hljs-keyword">with</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">system</span> package manager. It is recommended <span class="hljs-built_in">to</span> use <span class="hljs-keyword">a</span> virtual environment instead: <span class="hljs-keyword">https</span>://pip.pypa.io/warnings/venv
+<span class="hljs-number">2023</span><span class="hljs-number">-03</span><span class="hljs-number">-15</span> <span class="hljs-number">09</span>:<span class="hljs-number">10</span>:<span class="hljs-number">47</span> [chchang@ny ~ ]$ </code></pre></div>
+<p><strong>run pvpn without password authenticate</strong></p>
+<div><pre class="hljs"><code><span class="hljs-attribute">2023</span>-<span class="hljs-number">03</span>-<span class="hljs-number">15</span> <span class="hljs-number">09</span>:<span class="hljs-number">11</span>:<span class="hljs-number">05</span><span class="hljs-meta"> [chchang@ny ~ ]$ sudo pvpn
+Serving on UDP :500 :4500...</span></code></pre></div>
+<p><strong>run pvpn with password authenticatate</strong></p>
+<div><pre class="hljs"><code>[<span class="hljs-number">2023</span><span class="hljs-number">-03</span><span class="hljs-number">-15</span> <span class="hljs-number">09</span>:<span class="hljs-number">12</span>:<span class="hljs-number">20</span> [chchang@ny ~ ]$ sudo pvpn -p somesecretpasswordhere
+Serving <span class="hljs-literal">on</span> UDP :<span class="hljs-number">500</span> :<span class="hljs-number">4500.</span>..</code></pre></div>
+<p><strong>run pvpn with wireguard ( God Damn , so easy !)</strong></p>
+<div><pre class="hljs"><code>2023-03-15 09:13:14 [chchang@ny ~ ]$ sudo pvpn -wg 13000
+Serving on UDP :500 :4500...
+======== WIREGUARD SETTING ========
+<span class="hljs-section">PublicKey: kwcC05qapsVA28hoRI86ZUk6qlLM8sc9mfeAaS8cuis=
+===================================</span>
+Serving on UDP :13000 (WIREGUARD)...</code></pre></div>
+<h3 id="create-a-ipsec-vpn-in-ubuntu-2204">create a IPSEC VPN in ubuntu 22.04</h3>
+<p><strong>install packages</strong></p>
+<div><pre class="hljs"><code>sudo apt <span class="hljs-keyword">install</span> network-manager-l2tp-gnome</code></pre></div>
+<p>select L2TP (it's important !) in network manager panel<br />
+<img src="https://i.imgur.com/X3XcVPZ.png" /></p>
+<p>named your tunnel fill in your vpn server hostname/ip address in Gateway field and password , then click IPsec Settings<br />
+<img src="https://i.imgur.com/lQGnTf0.png" /></p>
+<p>update some options in IPsec settings<br />
+<img src="https://i.imgur.com/EQFdhaT.png" /></p>
+<p>enable VPN tunnel by clicking the button<br />
+<img src="https://i.imgur.com/91sWYMn.png" /></p>
+<p>if prompt to ask your password , just type the password again(should be auto saved !)<br />
+<img src="https://i.imgur.com/iDnPGh3.png" /></p>
+<p>you can see some message in you pvpn console, all y our traffic should go through your vpn server now! (that easy huh ?)<br />
+<img src="https://i.imgur.com/1IMW68l.png" /></p>
+<h3 id="things-to-be-improved">things to be improved</h3>
+<ul>
+<li>run pvpn as system daemon</li>
+<li>using wireguard instead IPSec (or different scenario ?)</li>
+<li>IPSec will default route all your traffic , not good.</li>
+<li>how to use command to bring up the tunnel in console ?</li>
+</ul>
+<hr />
+<p>HackMD Note URL: <a title="https://hackmd.io/91m1vrf6Rc-rVUf92zTAuw" href="https://hackmd.io/91m1vrf6Rc-rVUf92zTAuw">https://hackmd.io/91m1vrf6Rc-rVUf92zTAuw</a></p>
+</div>
+      </article>
+    </div>
+  </body>
+</html>
