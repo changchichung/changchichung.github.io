@@ -4,9 +4,35 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Wed, 15 Mar 2023 01:35:09 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 15 Mar 2023 01:54:23 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Joplin Pages Publisher</generator>
+        <item>
+            <title><![CDATA[add wireguard in gnome network-manager]]></title>
+            <guid>3a356aba9dd44bcda9b352b6b83a9b27</guid>
+            <pubDate>Wed, 15 Mar 2023 01:50:00 GMT</pubDate>
+            <content:encoded><![CDATA[<p>offcial site: <a title="https://github.com/max-moser/network-manager-wireguard" href="https://github.com/max-moser/network-manager-wireguard">https://github.com/max-moser/network-manager-wireguard</a></p>
+<h4 id="install-packages">install packages</h4>
+<div><pre class="hljs"><code>sudo apt install build-essential libgtk<span class="hljs-number">-3</span>-<span class="hljs-built_in">dev</span> libnma-<span class="hljs-built_in">dev</span> libsecret<span class="hljs-number">-1</span>-<span class="hljs-built_in">dev</span> intltool</code></pre></div>
+<h4 id="git-clone-repo-and-make">git clone repo and make</h4>
+<div><pre class="hljs"><code>git clone https:<span class="hljs-string">//github.com/max-moser/network-manager-wireguard</span>
+<span class="hljs-keyword">cd</span> network-manager-wireguard
+<span class="hljs-string">./autogen.sh</span> <span class="hljs-params">--without-libnm-glib</span>
+
+<span class="hljs-string">./configure</span> <span class="hljs-params">--prefix=/usr</span> \
+              <span class="hljs-params">--without-libnm-glib</span> \
+              <span class="hljs-params">--sysconfdir=/etc</span> \
+              <span class="hljs-params">--libdir=/usr/lib/x86_64-linux-gnu</span> \
+              <span class="hljs-params">--libexecdir=/usr/lib/NetworkManager</span> \
+              <span class="hljs-params">--localstatedir=/var</span>
+make
+sudo make install</code></pre></div>
+<p>now open the gnome network manage panel and you can see the wireguard protocol !<br />
+<img src="https://i.imgur.com/GaziiIg.png" /></p>
+<hr />
+<p>HackMD Note URL: <a title="https://hackmd.io/H1KTUYkMRiq6PRDHipT41g" href="https://hackmd.io/H1KTUYkMRiq6PRDHipT41g">https://hackmd.io/H1KTUYkMRiq6PRDHipT41g</a></p>
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[pythonvpn - a dead simple VPN]]></title>
             <guid>5230dcb8edd04f13b70ace0c7913240f</guid>
@@ -225,22 +251,6 @@ after installation , run these two commands<br />
     <span class="hljs-attr">path:</span> <span class="hljs-string">/tmp/user_pass</span>
   <span class="hljs-attr">with_items:</span> <span class="hljs-string">"<span class="hljs-template-variable">{{ users_nopassword }}</span>"</span>
   <span class="hljs-attr">when:</span> <span class="hljs-string">not</span> <span class="hljs-string">user_pass_reg.stdout.find(item.name)</span> <span class="hljs-type">!=</span> <span class="hljs-number">-1</span></code></pre></div>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[MrDoc]]></title>
-            <guid>751025e5e9ca4db1805140a7a23d742e</guid>
-            <pubDate>Wed, 18 May 2022 03:15:19 GMT</pubDate>
-            <content:encoded><![CDATA[<h3 id="郵箱設置">郵箱設置</h3>
-<p><img src="https://i.imgur.com/T7lo0wX.png" /></p>
-<h3 id="文檔設置">文檔設置</h3>
-<p>開放多種副檔名上傳 &amp; 調整單一檔案大小<br />
-<img src="https://i.imgur.com/0tH9zYL.png" /></p>
-<ul>
-<li>從iPhone 操作，確定可以選擇手機內的影片、圖片上傳。<br />
-但是影片只支援MP4 , MOV 檔案只能以附件形式上傳(無法預覽、播放<br />
-)</li>
-</ul>
 ]]></content:encoded>
         </item>
     </channel>
